@@ -1,0 +1,18 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "adhemarks@gmail.com",
+                "Name": "adhe"
+            }
+        ],
+        "Category": "",
+        "Description": "DZN-Linux Splash for Plasma KDE",
+        "Id": "dznlinux-Splash-Dark",
+        "License": "GPLv2+",
+        "Name": "dznlinux-Splash-Dark",
+        "Version": "2.0.0",
+        "Website": ""
+    }
+}
