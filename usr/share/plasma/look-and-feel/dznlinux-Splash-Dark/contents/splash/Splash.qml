@@ -50,33 +50,30 @@ Rectangle {
         }
 
         Rectangle {
+            property int sizeAnim: 400
 
-        property int sizeAnim: 400
-
-        id: imageSource
-        width:  sizeAnim
-        height: sizeAnim
-        color:  "transparent"
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: parent.verticalCenter
-        clip: true;
- 
-        AnimatedImage { 
-            id: face
-            source: "images/plasma_d.gif"
-            paused: false 
+            id: imageSource
+            width: sizeAnim
+            height: sizeAnim
+            color: "transparent"
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
-            width:  imageSource.sizeAnim - 7
-            height: imageSource.sizeAnim  - 7
-            smooth: true
-            visible: true 
-         }
-    }
+            clip: true
 
-       Image {
+            AnimatedImage {
+                id: face
+                source: "images/plasma_d.gif"
+                paused: false
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenter: parent.verticalCenter
+                width: imageSource.sizeAnim - 7
+                height: imageSource.sizeAnim - 7
+                smooth: true
+            }
+        }
+
+        Image {
             id: busyIndicator
-            //in the middle of the remaining space
             y: parent.height - 150
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.margins: units.gridUnit
@@ -91,12 +88,12 @@ Rectangle {
                 loops: Animation.Infinite
             }
         }
+
         Row {
             opacity: 0.5
-            spacing: units.smallSpacing*2
+            spacing: units.smallSpacing * 2
             anchors {
                 bottom: parent.bottom
-                // right: parent.right
                 margins: units.gridUnit
             }
             anchors.horizontalCenter: parent.horizontalCenter

@@ -82,14 +82,13 @@ After installation, activate the splash screen in KDE Plasma settings:
 
 1. Open **System Settings**
 2. Navigate to **Appearance** → **Splash Screen**
-3. Select **DZNLinux Dark** from the list
+3. Select **dznlinux-Splash-Dark** from the list
 4. Click **Apply**
 
 ### Method 2: Command Line
 
 ```bash
-# Set the splash screen
-kwriteconfig5 --file ~/.config/ksplashrc --group KSplash --key Theme dznlinux-Splash-Dark
+kwriteconfig6 --file ~/.config/ksplashrc --group KSplash --key Theme dznlinux-Splash-Dark
 ```
 
 ## File Structure
@@ -98,10 +97,15 @@ kwriteconfig5 --file ~/.config/ksplashrc --group KSplash --key Theme dznlinux-Sp
 usr/share/plasma/look-and-feel/dznlinux-Splash-Dark/
 ├── contents/
 │   ├── splash/
-│   │   └── Splash.qml       # Main splash screen QML
+│   │   ├── Splash.qml            # Main splash screen QML
+│   │   └── images/
+│   │       ├── busywidget.svgz   # Spinning busy indicator
+│   │       ├── kde.svgz          # KDE logo
+│   │       ├── plasma.svgz       # Plasma logo
+│   │       └── plasma_d.gif      # Animated logo
 │   └── previews/
-│       └── splash.png        # Preview image
-└── metadata.desktop          # Theme metadata
+│       └── splash.png            # Preview image
+└── metadata.json                 # Theme metadata
 ```
 
 ## What Gets Installed
@@ -139,12 +143,12 @@ cp -r usr/share/plasma/look-and-feel/dznlinux-Splash-Dark ~/.local/share/plasma/
 
 2. Check current splash screen:
    ```bash
-   kreadconfig5 --file ~/.config/ksplashrc --group KSplash --key Theme
+   kreadconfig6 --file ~/.config/ksplashrc --group KSplash --key Theme
    ```
 
 3. Try manually setting it:
    ```bash
-   kwriteconfig5 --file ~/.config/ksplashrc --group KSplash --key Theme dznlinux-Splash-Dark
+   kwriteconfig6 --file ~/.config/ksplashrc --group KSplash --key Theme dznlinux-Splash-Dark
    ```
 
 ### Splash screen shows errors
@@ -154,19 +158,13 @@ Check Plasma logs:
 journalctl --user -b | grep -i splash
 ```
 
-## Source Repository
-
-The source files are maintained at:
-https://github.com/DZN-Linux/dznlinux-splash-dark-plasma
-
 ## License
 
-GPL-3.0-or-later - See LICENSE file
+GPL-3.0-or-later — See LICENSE file
 
 ## Credits
 
-- DZN Linux Project
-- Seth Dawson <dznlinux@gmail.com>
+DZN Linux desktop configuration: Seth Dawson
 
 ## Links
 

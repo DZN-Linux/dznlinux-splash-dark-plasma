@@ -3,16 +3,16 @@
     "KPlugin": {
         "Authors": [
             {
-                "Email": "adhemarks@gmail.com",
-                "Name": "adhe"
+                "Email": "dznlinux@gmail.com",
+                "Name": "Seth Dawson"
             }
         ],
         "Category": "",
         "Description": "DZN-Linux Splash for Plasma KDE",
         "Id": "dznlinux-Splash-Dark",
-        "License": "GPLv2+",
+        "License": "GPL-3.0-or-later",
         "Name": "dznlinux-Splash-Dark",
-        "Version": "2.0.0",
-        "Website": ""
+        "Version": "1.0.0",
+        "Website": "https://github.com/DZN-Linux/dznlinux-splash-dark-plasma"
     }
 }
